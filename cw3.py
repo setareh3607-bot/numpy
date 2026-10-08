@@ -46,11 +46,26 @@
 # scores = songs @ w + b
 # print(scores)
 # =================================5===================
+# import numpy as np
+
+# stats = np.random.rand(4, 3)
+# skill_matrix = np.random.rand(3, 5)
+# matrix = stats @ skill_matrix
+# print(matrix.shape)
+# print(matrix[3])
+# ===================================6=========================
 import numpy as np
 
-stats = np.random.rand(4, 3)
-skill_matrix = np.random.rand(3, 5)
-matrix = stats @ skill_matrix
-print(matrix.shape)
-print(matrix[3])
+X_chars = np.array([
+[80, 40, 60],
+[30, 90, 50],
+[70, 70, 70],
+[95, 20, 40]
+])
+W_skills = np.random.randn(3, 3)
+b_skills = np.array([1.0, -0.5, 0.2])
+
+z = X_chars @ W_skills + b_skills
+print(z[:, 0])
+print(z.shape)
 
