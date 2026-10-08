@@ -32,16 +32,25 @@
 # print(cosine_sim)
 # print(cosine_sim2)
 # ==================================4================
+# import numpy as np
+
+# songs = np.array([
+#     [0.7, 0.9, 0.6],
+#     [0.6, 0.8, 0.5],
+#     [0.85, 0.15, 0.3],
+#     [0.5, 0.4, 0.7],
+#     [0.9, 0.1, 0.5]
+# ])
+# w = np.array([0.6, 0.8, 0.5])
+# b = 0.3
+# scores = songs @ w + b
+# print(scores)
+# =================================5===================
 import numpy as np
 
-songs = np.array([
-    [0.7, 0.9, 0.6],
-    [0.6, 0.8, 0.5],
-    [0.85, 0.15, 0.3],
-    [0.5, 0.4, 0.7],
-    [0.9, 0.1, 0.5]
-])
-w = np.array([0.6, 0.8, 0.5])
-b = 0.3
-scores = songs @ w + b
-print(scores)
+stats = np.random.rand(4, 3)
+skill_matrix = np.random.rand(3, 5)
+matrix = stats @ skill_matrix
+print(matrix.shape)
+print(matrix[3])
+
