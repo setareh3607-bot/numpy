@@ -20,3 +20,27 @@ print(students.shape[0])
 print(students.shape[1])
 print(x)
 print(y)
+print(x.shape)
+print(y.shape)
+# هر row یک دانشجو
+# هر ستون یک ویژگی
+# 
+# =====================================2=================
+
+rule_based_label = np.where(y >= 60, "pass", "fail")
+print(rule_based_label)
+print(np.sum(rule_based_label == "pass"))
+print(np.sum(rule_based_label == "fail"))
+
+# =========================================3================
+study_hours = np.mean(x[:, 0])
+attendance_percent = np.max(x[:, 1])
+attendance_percent_min = np.min(x[:, 1])
+effort_score = x[:, 0] * x[:, 1] / 100
+x_new = np.column_stack([x, effort_score])
+print(study_hours)
+print(attendance_percent)
+print(attendance_percent_min)
+print(effort_score)
+print(x_new)
+print(x_new.shape)
