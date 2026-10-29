@@ -55,3 +55,4 @@ print(fail)
 print(class_label)
 print(x)
 # ====================================5===============
+level_label = np.where(y <= 60 == "weak", np.where(y < 80, "normal", "stronge"))
