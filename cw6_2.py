@@ -38,21 +38,41 @@
 # y_pred = knn.predict(X_test)
 # print("Test accuracy:", accuracy_score(y_test, y_pred))
 # =============================================================================================
-import numpy as np
-from sklearn.linear_model import LinearRegression
+# import numpy as np
+# from sklearn.linear_model import LinearRegression
 
-np.random.seed(42)
-n = 80
-x = np.random.uniform(0, 20, n)
-noise = np.random.normal(0, 8, n)
-y = 7 * x -10 + noise
-X = x.reshape(-1, 1)
-model = LinearRegression()
-model.fit(X, y)
-w = model.coef_[0]
-b = model.intercept_
-print(w)
-print(b)
-print(abs(w-7))
-print(abs(b + 1))
+# np.random.seed(42)
+# n = 80
+# x = np.random.uniform(0, 20, n)
+# noise = np.random.normal(0, 8, n)
+# y = 7 * x -10 + noise
+# X = x.reshape(-1, 1)
+# model = LinearRegression()
+# model.fit(X, y)
+# w = model.coef_[0]
+# b = model.intercept_
+# print(w)
+# print(b)
+# print(abs(w-7))
+# print(abs(b + 1))
+# ======================================================
+import numpy as np
+
+
+def sigmoid(z):
+    return 1 / (1 + np.exp(-z))
+z = np.array([-10, -3, 0, 3, 10], dtype = float)
+probabilities = sigmoid(z)
+classes = (probabilities > 0.3).astype(int)
+for value, probabilities, label in zip(z, probabilities, classes):
+    print(f"z={value:g}, sigmoid={probabilities:6f}, class={label}")
+def softmax(scores):
+    shifted = scores - np.max(scores)
+    exp_scores = np.exp(shifted)
+    return exp_scores / np.sum(exp_scores)
+scores = np.array([0.2, 0.2, 0.2, 0.2])
+probabilities = softmax(scores)
+print(probabilities)
+print("sum:", np.sum(probabilities))
+
 
