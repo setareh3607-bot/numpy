@@ -3,4 +3,5 @@ venv
 pycache/
 .env
 *.pyc
+HW
 
