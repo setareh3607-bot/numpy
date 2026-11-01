@@ -1,0 +1,39 @@
+{
+    "bootcamp": "Maktab Sharif",
+    "karvands": [
+        {
+            "id": 1,
+            "name": "zahra",
+            "email": "t@gmail.com",
+            "city": "kerman",
+            "education": {
+                "degree": "kardani",
+                "field": "zist"
+            },
+            "skills": [
+                {
+                    "name": "python",
+                    "level": "midlevel",
+                    "score": 60
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "maryam",
+            "email": "m@gmail.com",
+            "city": "kerman",
+            "education": {
+                "degree": "kardani",
+                "field": "zist"
+            },
+            "skills": [
+                {
+                    "name": "python",
+                    "level": "midlevel",
+                    "score": 60
+                }
+            ]
+        }
+    ]
+}

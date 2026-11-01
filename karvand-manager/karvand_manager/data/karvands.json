@@ -1,0 +1,25 @@
+{
+    "bootcamp": {
+        "title": "Karvand Python",
+        "year": 2026
+    },
+    "karvands": [
+        {
+            "id": 1,
+            "full_name": "ali",
+            "email": "s@gmail.com",
+            "city": "tehran",
+            "education": {
+                "degree": "karshenasi",
+                "field": "field"
+            },
+            "skills": [
+                {
+                    "name": "skil",
+                    "level": "advance",
+                    "score": 100.0
+                }
+            ]
+        }
+    ]
+}

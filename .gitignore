@@ -3,5 +3,4 @@ venv
 pycache/
 .env
 *.pyc
-karvand-manager
 
